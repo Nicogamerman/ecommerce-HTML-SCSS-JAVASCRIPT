@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>E-commerce practice</title>
+  <style>
+    .attribution { font-size: 16px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main class="main-container">
+    <header class="header">
+      <img src="./images/icon-menu.svg" alt="menu icon">
+      <img src="./images/logo.svg" alt="logo">
+
+      <nav class="navbar">
+        <ul class="navbar__items">
+          <li><a href="#" class="navbar__link">Collections</a></li>
+          <li><a href="#" class="navbar__link">Men</a></li>
+          <li><a href="#" class="navbar__link">Women</a></li>
+          <li><a href="#" class="navbar__link">About</a></li>
+          <li><a href="#" class="navbar__link">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- inicio modal navbar -->
+      <div class="modal-navbar__background">
+        <nav class="modal-navbar">
+          <img class="modal-navbar__close-icon"src="./images/icon-close.svg" alt="">
+          <ul class="modal-navbar__items">
+            <li><a href="#" class="modal-navbar__link">Collections</a></li>
+            <li><a href="#" class="modal-navbar__link">Men</a></li>
+            <li><a href="#" class="modal-navbar__link">Women</a></li>
+            <li><a href="#" class="modal-navbar__link">About</a></li>
+            <li><a href="#" class="modal-navbar__link">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- final modal navbar -->
+      <div class="header__cart-avatar">
+          <div class="header__cart">
+              <div class="header__cart--notification">3</div>
+            <img src="./images/icon-cart.svg" alt="">
+          </div>
+        <img src="./images/image-avatar.png" alt="">
+      </div>
+    </header>
+    <section class="content">
+      <article class="gallery">
+        <div class="gallery__image-container">
+          <img class="gallery__previous" src="./images/icon-previous.svg" alt="previous">
+          <img class="gallery__next" src="./images/icon-next.svg" alt="next">
+        </div>
+        <div class="gallery">
+          <div class="gallery__thumnails">
+            <img class="gallery__thumnail" id="1" src="./images/image-product-1-thumbnail.jpg" alt="thumnail">
+            <img class="gallery__thumnail" id="2" src="./images/image-product-2-thumbnail.jpg" alt="thumnail">
+            <img class="gallery__thumnail" id="3" src="./images/image-product-3-thumbnail.jpg" alt="thumnail">
+            <img class="gallery__thumnail" id="4" src="./images/image-product-4-thumbnail.jpg" alt="thumnail">
+          </div>
+        </div>
+      </article>
+      <article class="details">
+        <h2 class="details__company">Sneakers Company</h2>
+        <h2 class="details__title">Limited edition sneakers</h2>
+        <p class="details__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione maiores est, optio veniam cum id quae rem dolorum! Rem magni qui distinctio nemo veritatis suscipit consequuntur dolore quos iusto quaerat!</p>
+        <div class="details__prices">
+          <p class="details__now">$15.000 <span class="details__discount">50%</span></p>
+          <p class="details__before">$30.000</p>
+        </div>
+        <div class="details__product-quantity">
+          <div class="input">
+            <img class="input__minus" src="./images/icon-minus.svg" alt="minus">
+            <input class="input__number" type="number" value="0">
+            <img class="input__plus" src="./images/icon-plus.svg" alt="plus">
+          </div>
+            <button class="details__button"><img src="./images/icon-cart.svg" alt=""> Add to cart</button>
+        </div>
+      </article>
+    </section>
+
+    <!-- inicio cart modal -->
+    <div class="cart-modal">
+      <p class="cart-modal__title">Cart</p>
+      <div class="cat-modal__chekout-container">
+        <div class="cat-modal__details-container">
+          <img src="./images/image-product-1-thumbnail.jpg" alt=""> 
+          <div>
+            <p class="cart-modal__product">Limited edition</p>
+            <p class="cart-modal__prirce">$30.000 x3 <span>$75.000</span></p>
+          </div>
+          <img class="cart-modal__delete" src="./images/icon-delete.svg" alt="delete">
+        </div>
+        <button class="cart-modal__delete">Checkout</button>
+      </div>
+    </div>
+    <!-- final cart modal -->
+
+    <!-- inicio gallery modal -->
+
+    <div class="modal-gallery__background">
+      <article class="modal-gallery">
+        <img class="modal-gallery__close" src="./images/icon-close.svg" alt="">
+        <div class="modal-gallery__image-container">
+          <img class="modal-gallery__previous" src="./images/icon-previous.svg" alt="previous">
+          <img class="modal-gallery__next" src="./images/icon-next.svg" alt="next">
+        </div>
+        <div class="modal-gallery">
+          <div class="modal-gallery__thumnails">
+            <img id="m1" class="modal-gallery__thumnail" id="1" src="./images/image-product-1-thumbnail.jpg" alt="thumnail">
+            <img id="m2" class="modal-gallery__thumnail" id="2" src="./images/image-product-2-thumbnail.jpg" alt="thumnail">
+            <img id="m3" class="modal-gallery__thumnail" id="3" src="./images/image-product-3-thumbnail.jpg" alt="thumnail">
+            <img id="m4" class="modal-gallery__thumnail" id="4" src="./images/image-product-4-thumbnail.jpg" alt="thumnail">
+          </div>
+        </div>
+      </article>
+    </div>
+    <!-- fin gallery modal -->
+  </main>
+  
+  <footer class="attribution">
+    <a href="https://github.com/Nicogamerman" target="_blank">Github</a>. 
+    Coded by <a href="https://www.linkedin.com/in/nicol%C3%A1s-gamerman-8117a2127/
+    " target="_blank">Nicolas Gamerman</a>.
+  </footer>
+</body>
+</html>
