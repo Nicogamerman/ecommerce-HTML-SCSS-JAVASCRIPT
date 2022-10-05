@@ -1,0 +1,11 @@
+@use 'variables'; //importo desde _variables para usar la fuente.
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: variables.$Font; //traigo la variable de la fuente
+}
