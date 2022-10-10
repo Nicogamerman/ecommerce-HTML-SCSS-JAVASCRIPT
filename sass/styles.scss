@@ -1,14 +1,17 @@
 @use 'initial'; //importa estilos de _initial.scss, nos permite trabajar de forma modular.
 @use 'variables';
 @use 'header';
+@use 'navbar';
+@use 'modal-navbar';
+@use 'gallery';
 
 .main-container{
     width: 375px;
-    border: 1px solid black;
+    border: 1px solid rgb(0, 0, 0);
     margin: auto;
+    position: relative;
     //nesting o anidamiento, esto nos lo permite sass.
     @media (min-width: 1115px){ //cuando el ancho de la web sea de 1115px, que ahora tenga un ancho de 1115px
         width:1115px;
     }
 }
-
