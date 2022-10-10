@@ -179,6 +179,14 @@ body {
 .gallery__next:hover {
   cursor: pointer;
 }
+.gallery__thumnail {
+  display: none;
+}
+@media (min-width: 1115px) {
+  .gallery__thumnail {
+    display: block;
+  }
+}
 
 .main-container {
   width: 375px;

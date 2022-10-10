@@ -16,4 +16,10 @@
     &__next{
         @include mixins.image-btn(170px, 320px);
     }
+    &__thumnail{
+        display: none;
+        @media (min-width: 1115px){
+            display: block;
+        }
+    }
 }
