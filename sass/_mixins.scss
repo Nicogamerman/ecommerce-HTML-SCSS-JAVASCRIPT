@@ -1,7 +1,7 @@
-@use 'variables';
+@use 'variables' as v;
 
 @mixin modal-background {
-    background-color: variables.$Black-modal;
+    background-color: v.$Black-modal;
     position: absolute;
     top: 0%;
     left: 0%;
@@ -12,7 +12,7 @@
 }
 
 @mixin image-btn ($top, $left){
-    background-color: variables.$White;
+    background-color: v.$White;
     width: 40px;
     height: 40px;
     padding: 12px;
@@ -23,6 +23,9 @@
     &:hover{
         cursor: pointer;
     }
+    @media (min-width:1115px){
+        display: none;
+    }
 }
 
 @mixin changeNumber($pv, $ph) { 
@@ -30,4 +33,29 @@
         // border: 1px solid;
         height: 100%;
         padding: $pv $ph;
+        &:hover{
+            cursor: pointer;
+            opacity: 0.5;
+        }
 }
+
+@mixin button {
+    background-color: v.$Orange;
+    width: 100%;
+    height: 57px;
+    border-radius: 8px;
+    border: none;
+    color: v.$White;
+    font-size: 0.9em;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:16px;
+    &:hover{
+        cursor: pointer;
+        opacity: 0.5;
+    }
+}
+
+// 2:39:36

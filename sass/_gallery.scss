@@ -1,8 +1,8 @@
-@use 'variables';
+@use 'variables' as v;
 @use 'mixins';
 .gallery{
     &__image-container{
-        border: 1px solid blue;
+        // border: 1px solid blue;
         height: 300px;
         width: 100%;
         background-image:url('../images/image-product-1.jpg');
@@ -16,12 +16,34 @@
     &__next{
         @include mixins.image-btn(170px, 320px);
     }
-    &__thumnail{
+    &__thumnails{
+        // border: 3px solid red;
         display: none;
         @media (min-width: 1115px){
             display: block;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &__thumnail{
+       width: 90px;
+       border-radius: 16px;
+        &:hover{
+            cursor: pointer;
+            border: 2px solid v.$Orange;
+        }
+    }
+
+
+    @media (min-width:1115px) {
+        width: 446px;
+        &__image-container{
+            background-position-y: 0px;
+            border-radius: 16px;
+            height: 446px;
+            margin-bottom: 32px;
         }
     }
 }
 
-// >sass sass/styles.scss main.css --watch
+//sass sass/styles.scss main.css --watch
