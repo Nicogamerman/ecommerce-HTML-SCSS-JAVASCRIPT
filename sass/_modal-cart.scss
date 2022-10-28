@@ -2,7 +2,7 @@
 @use 'mixins';
 
 .cart-modal{
-    display: none; //se tiene que ver al hacer click, pero lo hacemos con JavaScript
+    display: none;
     width: 360px;
     height: 260px;
     border-radius: 8px;

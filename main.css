@@ -88,7 +88,6 @@ body {
 
 .navbar {
   display: none;
-  border: 1px solid green;
   width: 400px;
 }
 .navbar__items {
@@ -115,25 +114,24 @@ body {
 .modal-navbar {
   background-color: hsl(0deg, 0%, 100%);
   width: 250px;
-  height: 100%;
+  height: 100vh;
   padding: 28px 24px;
-  display: none;
 }
 .modal-navbar__background {
-  background-color: rgba(64, 61, 61, 0.005);
+  background-color: hsla(0deg, 0%, 0%, 0.5);
   position: absolute;
-  top: 0%;
-  left: 0%;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  display: none;
   z-index: 1;
+  overflow: hidden;
 }
 .modal-navbar__items {
   display: flex;
   flex-direction: column;
-  height: 200px;
   justify-content: space-between;
+  height: 200px;
   list-style: none;
   margin-top: 50px;
 }
@@ -154,7 +152,7 @@ body {
   background-position-y: -35px;
   background-size: cover;
 }
-.gallery__previous {
+.gallery__previus {
   background-color: hsl(0deg, 0%, 100%);
   width: 40px;
   height: 40px;
@@ -164,11 +162,11 @@ body {
   top: 170px;
   left: 15px;
 }
-.gallery__previous:hover {
+.gallery__previus:hover {
   cursor: pointer;
 }
 @media (min-width: 1115px) {
-  .gallery__previous {
+  .gallery__previus {
     display: none;
   }
 }
@@ -195,7 +193,6 @@ body {
 }
 @media (min-width: 1115px) {
   .gallery__thumnails {
-    display: block;
     display: flex;
     justify-content: space-between;
   }
@@ -211,9 +208,10 @@ body {
 @media (min-width: 1115px) {
   .gallery {
     width: 446px;
+    cursor: pointer;
   }
   .gallery__image-container {
-    background-position-y: 0px;
+    background-position-y: 0;
     border-radius: 16px;
     height: 446px;
     margin-bottom: 32px;
@@ -244,6 +242,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin-bottom: 24px;
+  align-items: center;
 }
 .details__now {
   font-size: 1.8em;
@@ -257,13 +256,12 @@ body {
   background-color: hsl(25deg, 100%, 94%);
   color: hsl(26deg, 100%, 55%);
   padding: 4px;
-  border-radius: 4px;
+  border: 4px;
 }
 .details__before {
   font-weight: 700;
   color: hsl(219deg, 9%, 45%);
   text-decoration: line-through;
-  padding: 10px;
 }
 .details__button {
   background-color: hsl(26deg, 100%, 55%);
@@ -319,7 +317,6 @@ body {
 }
 .input__minus:hover {
   cursor: pointer;
-  opacity: 0.5;
 }
 .input__number {
   width: 100%;
@@ -338,7 +335,6 @@ body {
 }
 .input__plus:hover {
   cursor: pointer;
-  opacity: 0.5;
 }
 
 .cart-modal {
@@ -397,9 +393,93 @@ body {
   opacity: 0.5;
 }
 
+.modal-gallery {
+  width: 550px;
+}
+.modal-gallery__background {
+  background-color: hsla(0deg, 0%, 0%, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+  display: none;
+  place-content: center;
+}
+.modal-gallery__close-container {
+  text-align: right;
+  height: 30px;
+}
+.modal-gallery__close {
+  width: 16px;
+}
+.modal-gallery__close:hover {
+  cursor: pointer;
+  content: url("../images/image-close-orange.svg");
+}
+.modal-gallery__image-container {
+  background-image: url("../images/image-product-1.jpg");
+  height: 446px;
+  background-size: cover;
+  border-radius: 16px;
+  margin-bottom: 32px;
+  position: relative;
+}
+.modal-gallery__thumnails {
+  display: flex;
+  justify-content: space-between;
+  width: 450px;
+  margin: auto;
+}
+.modal-gallery__thumnail {
+  width: 90px;
+  border-radius: 16px;
+}
+.modal-gallery__thumnail:hover {
+  cursor: pointer;
+  border: 2px solid hsl(26deg, 100%, 55%);
+}
+.modal-gallery__previus {
+  background-color: hsl(0deg, 0%, 100%);
+  width: 40px;
+  height: 40px;
+  padding: 12px;
+  border-radius: 50%;
+  position: absolute;
+  top: 190px;
+  left: -15px;
+}
+.modal-gallery__previus:hover {
+  cursor: pointer;
+}
+@media (min-width: 1115px) {
+  .modal-gallery__previus {
+    display: block;
+  }
+}
+.modal-gallery__next {
+  background-color: hsl(0deg, 0%, 100%);
+  width: 40px;
+  height: 40px;
+  padding: 12px;
+  border-radius: 50%;
+  position: absolute;
+  top: 190px;
+  left: 520px;
+}
+.modal-gallery__next:hover {
+  cursor: pointer;
+}
+@media (min-width: 1115px) {
+  .modal-gallery__next {
+    display: block;
+  }
+}
+
 .main-container {
   width: 375px;
-  border: 1px solid rgb(0, 0, 0);
   margin: auto;
   position: relative;
 }
@@ -415,6 +495,17 @@ body {
     padding: 90px 50px;
     gap: 124px;
   }
+}
+
+.show {
+  display: block;
+}
+
+.cart-empty {
+  font-weight: 700;
+  color: hsla(0deg, 0%, 0%, 0.5);
+  text-align: center;
+  margin-top: 30px;
 }
 
 /*# sourceMappingURL=main.css.map */

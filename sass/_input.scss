@@ -2,7 +2,6 @@
 @use 'mixins';
 
 .input{
-    // border: 1px solid rgb(0, 191, 255);
     height: 57px;
     display: flex;
     justify-content: space-between;
@@ -22,8 +21,6 @@
         outline: none;
     }
     &__plus{
-        @include mixins.changeNumber (19px, 3px);
+        @include mixins.changeNumber(19px, 3px);
     }
 }
-
-//1:02:55 video 2/3 ecomerce con HTML,SCSS, JAVASCRIPT

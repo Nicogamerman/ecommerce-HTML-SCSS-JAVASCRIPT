@@ -3,19 +3,18 @@
 
 .modal-navbar{
     &__background{
-        @include mixins.modal-background;    
+        @include mixins.modal-background;
     }
     background-color: variables.$White;
     width: 250px;
-    height: 100%;
+    height: 100vh;
     padding: 28px 24px;
-    display: none;
+    // display: none;
     &__items{
-        // border: 10px solid red;
         display: flex;
         flex-direction: column;
-        height: 200px;
         justify-content: space-between;
+        height: 200px;
         list-style: none;
         margin-top: 50px;
     }

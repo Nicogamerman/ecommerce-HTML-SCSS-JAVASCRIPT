@@ -2,7 +2,6 @@
 
 .navbar{
     display: none;
-    border: 1px solid green;
     width: 400px;
     &__items{
         list-style: none;
@@ -19,7 +18,7 @@
             border-bottom: 4px solid variables.$Orange;
         }
     }
-    @media(min-width:1115px){
+    @media (min-width: 1115px){
         display: block;
     }
 }

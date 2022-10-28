@@ -1,11 +1,11 @@
-@use 'variables' as v; //renombro con una letra para no estar escribiendi variables cada vez que las llamo
+@use 'variables' as v;
 @use 'mixins';
 
 .details{
     // border: 1px solid red;
     padding: 24px;
     &__company{
-        color: v.$Orange; //uso v para llamar a la variable $Orange
+        color: v.$Orange;
         text-transform: uppercase;
         font-size: 0.8em;
         letter-spacing: 1px;
@@ -22,38 +22,35 @@
         margin-bottom: 24px;
     }
     &__prices{
-        // border: 1px solid red;
         display: flex;
         justify-content: space-between;
         margin-bottom: 24px;
+        align-items: center;
     }
     &__now{
         font-size: 1.8em;
         font-weight: 700;
-        // border: 2px solid blue;
         display: flex;
         align-items: center;
         gap: 18px;
     }
     &__discount{
-        // border: 1px solid yellow;
         font-size: 0.5em;
         background-color: v.$Pale-orange;
         color: v.$Orange;
         padding: 4px;
-        border-radius: 4px;
+        border: 4px;
     }
     &__before{
         font-weight: 700;
         color: v.$Dark-grayish-blue;
         text-decoration: line-through;
-        padding: 10px;
     }
     &__button{
         @include mixins.button;
     }
-
-    @media(min-width: 1115px){
+    
+    @media (min-width: 1115px){
         width: 446px;
         padding-top: 60px;
         &__title{

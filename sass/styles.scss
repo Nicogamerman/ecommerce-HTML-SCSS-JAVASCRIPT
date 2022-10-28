@@ -1,4 +1,4 @@
-@use 'initial'; //importa estilos de _initial.scss, nos permite trabajar de forma modular.
+@use 'initial';
 @use 'variables';
 @use 'header';
 @use 'navbar';
@@ -7,22 +7,31 @@
 @use 'details';
 @use 'input';
 @use 'modal-cart';
+@use 'gallery-modal';
 
 .main-container{
     width: 375px;
-    border: 1px solid rgb(0, 0, 0);
+    // border: 1px solid black;
     margin: auto;
     position: relative;
-    //nesting o anidamiento, esto nos lo permite sass.
-    @media (min-width: 1115px){ //cuando el ancho de la web sea de 1115px, que ahora tenga un ancho de 1115px
-        width:1115px;
+    @media (min-width: 1115px){
+        width: 1115px;
     }
 }
-
 .content{
-    @media(min-width: 1115px){
+    @media (min-width: 1115px){
         display: flex;
         padding: 90px 50px;
         gap: 124px;
     }
+}
+
+.show{
+    display: block;
+}
+.cart-empty{
+    font-weight: 700;
+    color: variables.$Black-modal;
+    text-align: center;
+    margin-top: 30px;
 }
