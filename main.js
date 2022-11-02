@@ -2,7 +2,7 @@
 
 const minusBtn = document.querySelector('.input__minus'); //Decremento de cantidad desde icono.
 const plusBtn = document.querySelector('.input__plus'); //Aumento cantidad desde icono.
-let userInput = document.querySelector('.input__number'); //Cantidad de objetos comrpados.
+let userInput = document.querySelector('.input__number'); //Cantidad de objetos comprados.
 
 let userInputNumber = 0; //Valor por defecto del input.
 
@@ -31,24 +31,21 @@ addToCartBtn.addEventListener('click', ()=>{
     cartNotification.innerText = lastValue;
     cartNotification.style.display = 'block';
     drawProductInModal();
-    
 });
 
-//Mostrar el modal con el detalle del carrito
-const cartIconBtn = document.querySelector('.header__cart');
+//Mostrar el modal con el detalle del carrito al hacer click en el icono carrito margen superior derecho.
+const cartIconBtn = document.querySelector('.header__cart'); 
 const cartModal = document.querySelector('.cart-modal');
 // let priceModal = document.querySelector('.cart-modal__price');
-const productContainer = document.querySelector('.cart-modal__chekout-container');
+const productContainer = document.querySelector('.cart-modal__checkout-container');
 
 cartIconBtn.addEventListener('click', ()=>{
-    cartModal.classList.toggle('show');
-
-    if(lastValue === 0){
-        productContainer.innerHTML = '<p class="cart-empty">Your cart is empty</p>';
+    cartModal.classList.toggle('show'); //Agrego la clase show creada en el main.css y cambia el display: block
+    if(lastValue === 0){ //Si el valor es CERO, mostrar en pantalla "tu carrito esta vacio".
+        productContainer.innerHTML = '<p class="cart-empty">Your cart is empty</p>'; //InnerHTML para insertar etiqueta HTML.
     }else{
         drawProductInModal();
     }
-    
 });
 
 //Borrar el contenido del carrito
@@ -150,14 +147,14 @@ function drawProductInModal(){
             <img class="cart-modal__image" src="./images/image-product-1-thumbnail.jpg" alt="">
             <div>
             <p class="cart-modal__product">Autumn Limited Edition...</p>
-            <p class="cart-modal__price">$125 x3 <span>$375.00</span> </p>
+            <p class="cart-modal__price">$100 x3 <span>$300.00</span> </p>
             </div>
             <img class="cart-modal__delete" src="./images/icon-delete.svg" alt="delete">
         </div>
-        <button class="cart-modal__chekount" >Checkout</button>`
+        <button class="cart-modal__checkount" >Checkout</button>`
     deleteProduct()
     let priceModal = document.querySelector('.cart-modal__price');
-    priceModal.innerHTML = `$125 x${lastValue} <span>$${lastValue*125}.00</span>`;
+    priceModal.innerHTML = `$100 x${lastValue} <span>$${lastValue*100}.00</span>`;
 }
 
 function changeNextImage(imgContainer){

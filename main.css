@@ -353,7 +353,7 @@ body {
   padding: 24px;
   border-bottom: 1px solid hsl(220deg, 14%, 75%);
 }
-.cart-modal__chekout-container {
+.cart-modal__checkout-container {
   padding: 24px;
 }
 .cart-modal__details-container {
@@ -374,7 +374,7 @@ body {
 .cart-modal__delete:hover {
   cursor: pointer;
 }
-.cart-modal__chekount {
+.cart-modal__checkount {
   background-color: hsl(26deg, 100%, 55%);
   width: 100%;
   height: 57px;
@@ -388,7 +388,7 @@ body {
   justify-content: center;
   gap: 16px;
 }
-.cart-modal__chekount:hover {
+.cart-modal__checkount:hover {
   cursor: pointer;
   opacity: 0.5;
 }
@@ -417,7 +417,7 @@ body {
 }
 .modal-gallery__close:hover {
   cursor: pointer;
-  content: url("../images/image-close-orange.svg");
+  content: url("../images/icon-close-orange.svg");
 }
 .modal-gallery__image-container {
   background-image: url("../images/image-product-1.jpg");
@@ -508,4 +508,3 @@ body {
   margin-top: 30px;
 }
 
-/*# sourceMappingURL=main.css.map */
