@@ -1,21 +1,21 @@
 // Cambio de cantidad de articulos ingresado por el usuario.
 
-const minusBtn = document.querySelector('.input__minus');
-const plusBtn = document.querySelector('.input__plus');
-let userInput = document.querySelector('.input__number');
+const minusBtn = document.querySelector('.input__minus'); //Decremento de cantidad desde icono.
+const plusBtn = document.querySelector('.input__plus'); //Aumento cantidad desde icono.
+let userInput = document.querySelector('.input__number'); //Cantidad de objetos comrpados.
 
-let userInputNumber = 0;
+let userInputNumber = 0; //Valor por defecto del input.
 
-plusBtn.addEventListener('click', ()=>{
-    userInputNumber++;
-    userInput.value = userInputNumber;
-    console.log(userInputNumber);
+plusBtn.addEventListener('click', ()=>{ //Agrego una escucha para ver el click.
+    userInputNumber++; //Sumo uno.
+    userInput.value = userInputNumber;  //.value equivale a lo que tenemos en value en el HTML
+    console.log(userInputNumber); //Imprimo la variable indicada por el usuario para mostrarla.
 });
 
 minusBtn.addEventListener('click', ()=>{
-    userInputNumber--;
-    if(userInputNumber <= 0){
-        userInputNumber = 0;
+    userInputNumber--; //Disminuyo de a una unidad.
+    if(userInputNumber <= 0){ //Evito que vaya menos de cero.
+        userInputNumber = 0; //Si va a menos de cero, se mantiene en cero.
     }
     userInput.value = userInputNumber;
     console.log(userInputNumber);
@@ -28,7 +28,6 @@ let lastValue = parseInt(cartNotification.innerText);
 
 addToCartBtn.addEventListener('click', ()=>{ 
     lastValue = lastValue + userInputNumber;
-    
     cartNotification.innerText = lastValue;
     cartNotification.style.display = 'block';
     drawProductInModal();
