@@ -373,6 +373,7 @@ body {
 }
 .cart-modal__delete:hover {
   cursor: pointer;
+  content: url("../images/icon-delete.svg");
 }
 .cart-modal__checkount {
   background-color: hsl(26deg, 100%, 55%);

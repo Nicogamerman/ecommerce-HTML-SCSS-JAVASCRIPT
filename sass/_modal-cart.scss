@@ -37,6 +37,7 @@
     }
     &__delete:hover{
         cursor: pointer;
+        content: url('../images/icon-delete.svg');
     }
     &__checkount{
         @include mixins.button;
