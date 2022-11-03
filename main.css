@@ -417,7 +417,7 @@ body {
 }
 .modal-gallery__close:hover {
   cursor: pointer;
-  content: url("../images/icon-close-orange.svg");
+  content: url("../images/icon-close.svg");
 }
 .modal-gallery__image-container {
   background-image: url("../images/image-product-1.jpg");
@@ -508,3 +508,4 @@ body {
   margin-top: 30px;
 }
 
+/*# sourceMappingURL=main.css.map */
